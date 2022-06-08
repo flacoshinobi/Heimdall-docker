@@ -15,4 +15,6 @@ FROM scratch
 COPY --from=build /Heimdall-1.4.2/build/bin/heimdall /opt/heimdall/heimdall
 ENV PATH=$PATH:/opt/heimdall
 
+WORKDIR /fw
+
 ENTRYPOINT ["heimdall"]
